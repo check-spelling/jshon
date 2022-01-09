@@ -1,0 +1,15 @@
+# See https://github.com/check-spelling/check-spelling/wiki/Configuration-Examples:-patterns
+
+md5sums=\('[0-9a-f]+'\)
+
+# flags
+\s-[a-z]\([a-z ]{2,}\) (?:\w+ |)->
+
+# Compiler flags
+[\t "'`=(]-[Wl]
+
+# tar arguments
+\b(?:\\n|)tar(?:\s+-[a-zA-Z]+|\s[a-z]+)+
+
+# ignore long runs of a single character:
+\b([A-Za-z])\g{-1}{3,}\b
